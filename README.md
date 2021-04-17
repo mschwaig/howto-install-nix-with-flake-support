@@ -24,7 +24,7 @@ nix-env -iA nixpkgs.nixFlakes
 and then add the following lines to `~/.config/nix/nix.conf`
 
 ```
-experimental-features = nix-command flakes
+experimental-features = nix-command flakes ca-references
 ```
 
 ## Step 3: Verify
