@@ -8,7 +8,7 @@ These steps help you set up the Nix package manager with support for a experimen
 Run the following command with sudo but not directly as root:
 
 ```
-$ curl -L https://nixos.org/nix/install | sudo sh
+$ curl -L https://nixos.org/nix/install | sh
 ```
 
 See https://nixos.org/download.html for more info.
