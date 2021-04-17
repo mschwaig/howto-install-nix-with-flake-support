@@ -8,7 +8,7 @@ These steps help you set up the Nix package manager with support for a experimen
 Run the following command with sudo but not directly as root:
 
 ```
-$ curl -L https://nixos.org/nix/install | sudo sh
+$ curl -L https://nixos.org/nix/install | sh
 ```
 
 See https://nixos.org/download.html for more info.
@@ -24,7 +24,7 @@ nix-env -iA nixpkgs.nixFlakes
 and then add the following lines to `~/.config/nix/nix.conf`
 
 ```
-experimental-features = nix-command flakes
+experimental-features = nix-command flakes ca-references
 ```
 
 ## Step 3: Verify
