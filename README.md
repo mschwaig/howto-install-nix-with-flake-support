@@ -51,3 +51,7 @@ Available commands:
 Note: this program is EXPERIMENTAL and subject to change.
 ```
 
+## Step 4: Install something
+```
+nix profile install github:idris-lang/Idris2 
+```
