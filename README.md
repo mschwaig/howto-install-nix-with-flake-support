@@ -1,4 +1,4 @@
-How to set up the Nix package manager with flake support
+Idris 2 Installation via Setting up of the Nix package manager with flake support
 ===
 
 These steps help you set up the Nix package manager with support for a experimental more user-friendly command language and a defined package format called flakes that makes it easier to create builds in a strictly determined environment, so that they create the same outputs on various machines or in CI.
