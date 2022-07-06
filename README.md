@@ -5,29 +5,28 @@ These steps help you set up the Nix package manager with support for a experimen
 
 ## Step 1: Install the Nix package manager
 
-Run the following command with sudo but not directly as root:
+To install Nix, please follow the instructions at [https://nixos.org/download.html](https://nixos.org/download.html), since they are quite good.
 
-```
-$ curl -L https://nixos.org/nix/install | sudo sh
-```
+If you want to know more before installing you can [read the install section in the Nix manual directly](https://nixos.org/manual/nix/stable/#ch-installing-binary).
 
-See https://nixos.org/download.html for more info.
-Note that you can split up the abovementioned commands in accordance with your own risk-appetite.
+You might have to re-open your terminals, restart your graphical session or even reboot after this step.
 
 ## Step 2: Enable the right experimental features
 
-First run the following comand
-```
-nix-env -iA nixpkgs.nixFlakes
-```
+Recent releases of Nix already ship with the required code for flakes, but leave them behind a feature flag that you have to enable.
 
-and then add the following lines to `~/.config/nix/nix.conf`
+To enable them, you have to add the following lines to `/etc/nix/nix.conf`
 
 ```
 experimental-features = nix-command flakes
 ```
 
-## Step 3: Verify
+and on a multi-user install (invoked with --daemon) restart the nix daemon so it can pick up the newly set experimental options.
+```
+systemctl restart nix-daemon.service
+```
+
+## Step 3: Verify Nix Install
 
 The following command should now give similar output.
 
