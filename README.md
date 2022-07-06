@@ -32,6 +32,9 @@ The following command should now give similar output.
 
 ```
 $ nix flake --help
+```
+
+```
 Usage: nix flake COMMAND FLAGS... ARGS...
 
 Common flags:
